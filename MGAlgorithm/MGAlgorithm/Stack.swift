@@ -50,12 +50,10 @@ public class Stack<Element> {
 extension Stack: CustomStringConvertible {
 
     public var description: String {
-        
         """
         ----top----
         \(storage.map{"\($0)"}.reversed().joined(separator: "\n"))
         ----end----
         """
-        
     }
 }

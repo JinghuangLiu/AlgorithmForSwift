@@ -16,6 +16,11 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .white
         
+        printInReverse(["刘","靖","煌"])
+        
+    }
+    
+    func stackSimpleDemo() {
         let stack = Stack<Int>()
         stack.push(1)
         stack.push(2)
@@ -30,7 +35,16 @@ class ViewController: UIViewController {
             print("Pop element is : \(popElement)")
             print(stack)
         }
-        
+    }
+    
+    func printInReverse<T>(_ array: [T]) {
+        let stack = Stack<T>()
+        for value in array {
+            stack.push(value)
+        }
+        while let value = stack.pop(){
+            print(value)
+        }
     }
 
 
