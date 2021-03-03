@@ -16,6 +16,8 @@
 		48BE5FCB25EE3DD80090933F /* Stack.swift in Headers */ = {isa = PBXBuildFile; fileRef = 48BE5FC725EE3BB10090933F /* Stack.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		48BE5FD325EE3DF90090933F /* MGAlgorithm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48BE5F9F25EE3B100090933F /* MGAlgorithm.framework */; };
 		48BE5FD425EE3DF90090933F /* MGAlgorithm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 48BE5F9F25EE3B100090933F /* MGAlgorithm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		48BE5FDA25EE65610090933F /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BE5FD925EE65610090933F /* LinkedList.swift */; };
+		48BE5FDC25EE66E10090933F /* LinkedList.swift in Headers */ = {isa = PBXBuildFile; fileRef = 48BE5FD925EE65610090933F /* LinkedList.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,7 @@
 		48BE5FBD25EE3B350090933F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48BE5FBF25EE3B350090933F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48BE5FC725EE3BB10090933F /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		48BE5FD925EE65610090933F /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,7 @@
 			children = (
 				48BE5FA325EE3B100090933F /* Info.plist */,
 				48BE5FC725EE3BB10090933F /* Stack.swift */,
+				48BE5FD925EE65610090933F /* LinkedList.swift */,
 			);
 			path = MGAlgorithm;
 			sourceTree = "<group>";
@@ -130,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48BE5FCB25EE3DD80090933F /* Stack.swift in Headers */,
+				48BE5FDC25EE66E10090933F /* LinkedList.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48BE5FDA25EE65610090933F /* LinkedList.swift in Sources */,
 				48BE5FC825EE3BB10090933F /* Stack.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
