@@ -50,6 +50,17 @@ public class LinkedList<Value> {
         }
     }
     
+    /// 删掉表头的数据
+    public func pop() -> Value? {
+        defer {
+            head = head?.next
+            if isEmpty {
+                tail = nil
+            }
+        }
+        return head?.value
+    }
+    
     /// 把数据加在链表尾
     /// - Parameter value: 数据
     public func append(_ value:Value) {
@@ -64,7 +75,21 @@ public class LinkedList<Value> {
         tail = tail!.next
     }
     
-    /// 查询索引为index下的节点
+    public func removeLast() -> Value?{
+        ///如果是空链表，直接返回
+        guard let head = head else {
+            return nil
+        }
+        
+        guard head.next != nil else {
+            return pop()
+        }
+        
+        return nil
+        
+    }
+    
+    /// 查询索引为index下的节点，时间复杂度：O(n)
     /// - Parameter index: 索引
     /// - Returns: 节点
     public func node(at index:Int) -> Node<Value>? {
