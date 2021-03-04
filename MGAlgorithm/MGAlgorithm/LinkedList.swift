@@ -80,13 +80,23 @@ public class LinkedList<Value> {
         guard let head = head else {
             return nil
         }
-        
+        ///如果头节点没有next节点，直接删除头节点
         guard head.next != nil else {
             return pop()
         }
+        ///
+        var prev = head
+        var current = head
         
-        return nil
-        
+        ///当current.next为nil时，current为最后一个节点
+        while let next = current.next {
+            prev = current
+            current = next
+        }
+        ///
+        prev.next = nil
+        tail = prev
+        return current.value
     }
     
     /// 查询索引为index下的节点，时间复杂度：O(n)
@@ -104,8 +114,12 @@ public class LinkedList<Value> {
         }
         return currentNode
     }
-    
-    // 1
+
+    /// 在某个节点后插入一个数值
+    /// - Parameters:
+    ///   - value: 数值
+    ///   - node: 节点
+    /// - Returns: 节点
     @discardableResult
     public func insert(_ value:Value, after node:Node<Value>) -> Node<Value> {
         
@@ -117,6 +131,20 @@ public class LinkedList<Value> {
         // 3
         node.next = Node(value: value, next: node.next)
         return node.next!
+    }
+    
+    /// 删除掉某个节点后的节点
+    /// - Parameter node: 节点
+    /// - Returns: 数据
+    @discardableResult
+    public func remove(after node:Node<Value>) -> Value? {
+        defer {
+            if node.next === tail {
+                tail = node
+            }
+            node.next = node.next?.next
+        }
+        return node.next?.value
     }
 }
 
