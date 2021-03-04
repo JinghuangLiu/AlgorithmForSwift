@@ -7,7 +7,7 @@
 
 import Foundation
 
-/// 节点
+/// 节点，核心：节点的值、下一个节点
 public class Node<Value> {
     
     public var value: Value
@@ -28,7 +28,7 @@ extension Node: CustomStringConvertible {
     }
 }
 
-/// 链表
+/// 链表，核心：头节点、尾节点、新增节点、删除节点
 public class LinkedList<Value> {
     
     public var head: Node<Value>?
@@ -51,6 +51,7 @@ public class LinkedList<Value> {
     }
     
     /// 删掉表头的数据
+    @discardableResult
     public func pop() -> Value? {
         defer {
             head = head?.next
@@ -75,6 +76,9 @@ public class LinkedList<Value> {
         tail = tail!.next
     }
     
+    /// 删除链表的最后一个节点
+    /// - Returns: 节点的值
+    @discardableResult
     public func removeLast() -> Value?{
         ///如果是空链表，直接返回
         guard let head = head else {
@@ -93,7 +97,7 @@ public class LinkedList<Value> {
             prev = current
             current = next
         }
-        ///
+        ///把前一个当成最后一个
         prev.next = nil
         tail = prev
         return current.value

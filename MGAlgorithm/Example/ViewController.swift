@@ -80,6 +80,15 @@ class ViewController: UIViewController {
         
         list.insert(-8, after: list.node(at: 4)!)
         print(list)
+        
+        list.pop()
+        print(list)
+        
+        list.removeLast()
+        print(list)
+        
+        list.remove(after: list.node(at: 1)!)
+        print(list)
     }
 
 }
