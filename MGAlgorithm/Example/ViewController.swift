@@ -16,6 +16,8 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .white
         
+//        stackDemo()
+        
 //        printInReverse(["刘","靖","煌"])
         
 //        nodeDemo()

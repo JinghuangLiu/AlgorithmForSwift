@@ -41,7 +41,7 @@ public class LinkedList<Value> {
         head == nil
     }
     
-    /// 往链表头加一个数值
+    /// 往链表头加一个数值，时间复杂度O(1)
     /// - Parameter value: 数值
     public func push(_ value:Value) {
         head = Node(value: value, next: head)
@@ -50,7 +50,8 @@ public class LinkedList<Value> {
         }
     }
     
-    /// 删掉表头的数据
+    /// 删掉表头的数据，时间复杂度O(1)
+    /// - Returns: 头节点的数值
     @discardableResult
     public func pop() -> Value? {
         defer {
@@ -62,7 +63,7 @@ public class LinkedList<Value> {
         return head?.value
     }
     
-    /// 把数据加在链表尾
+    /// 把数据加在链表尾，时间复杂度O(1)
     /// - Parameter value: 数据
     public func append(_ value:Value) {
         ///如果是空的链表，直接加上
@@ -76,7 +77,7 @@ public class LinkedList<Value> {
         tail = tail!.next
     }
     
-    /// 删除链表的最后一个节点
+    /// 删除链表的最后一个节点，时间复杂度O(n)
     /// - Returns: 节点的值
     @discardableResult
     public func removeLast() -> Value?{
@@ -119,7 +120,7 @@ public class LinkedList<Value> {
         return currentNode
     }
 
-    /// 在某个节点后插入一个数值
+    /// 在某个节点后插入一个数值，时间复杂度O(1)
     /// - Parameters:
     ///   - value: 数值
     ///   - node: 节点
@@ -137,7 +138,7 @@ public class LinkedList<Value> {
         return node.next!
     }
     
-    /// 删除掉某个节点后的节点
+    /// 删除掉某个节点后的节点，时间复杂度O(1)
     /// - Parameter node: 节点
     /// - Returns: 数据
     @discardableResult
