@@ -22,9 +22,9 @@ class ViewController: UIViewController {
         
 //        nodeDemo()
         
-        linkedListDemo()
+//        linkedListDemo()
         
-        
+        queueDemo()
     }
     
     func stackDemo() {
@@ -91,6 +91,19 @@ class ViewController: UIViewController {
         
         list.remove(after: list.node(at: 1)!)
         print(list)
+    }
+    
+    func queueDemo() {
+        let queue = QueueArray<String>()
+        
+        queue.enqueue("liu")
+        queue.enqueue("jing")
+        queue.enqueue("huang")
+        print(queue)
+        
+        queue.dequeue()
+        print(queue)
+        
     }
 
 }
