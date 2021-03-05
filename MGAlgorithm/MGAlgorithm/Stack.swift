@@ -30,6 +30,7 @@ public class Stack<Element> {
     
     /// 出栈
     /// - Returns: 栈顶元素
+    @discardableResult
     public func pop() -> Element? {
         //removeLast()要求数组不为空，popLast()可以为空
         return storage.popLast()

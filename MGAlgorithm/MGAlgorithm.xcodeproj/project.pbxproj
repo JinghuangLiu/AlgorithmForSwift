@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		481AEBC325F1DE4F00EF097C /* Queues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481AEBC225F1DE4F00EF097C /* Queues.swift */; };
+		48A41D8225F24D4400829D5E /* Queues.swift in Headers */ = {isa = PBXBuildFile; fileRef = 481AEBC225F1DE4F00EF097C /* Queues.swift */; settings = {ATTRIBUTES = (Public, ); }; };
 		48BE5FB225EE3B350090933F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BE5FB125EE3B350090933F /* AppDelegate.swift */; };
 		48BE5FB625EE3B350090933F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48BE5FB525EE3B350090933F /* ViewController.swift */; };
 		48BE5FB925EE3B350090933F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48BE5FB725EE3B350090933F /* Main.storyboard */; };
@@ -138,6 +139,7 @@
 			files = (
 				48BE5FCB25EE3DD80090933F /* Stack.swift in Headers */,
 				48BE5FDC25EE66E10090933F /* LinkedList.swift in Headers */,
+				48A41D8225F24D4400829D5E /* Queues.swift in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
