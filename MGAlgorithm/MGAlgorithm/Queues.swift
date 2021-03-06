@@ -16,7 +16,7 @@ public protocol Queue {
     var peek: Element? { get }
 }
 
-/// 用数据实现队列
+/// 用数组实现队列
 public class QueueArray<T>: Queue {
     private var array: [T] = []
     public init(){}
