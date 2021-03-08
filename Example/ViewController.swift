@@ -16,7 +16,7 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .white
         
-//        stackDemo()
+        stackDemo()
         
 //        printInReverse(["刘","靖","煌"])
         
@@ -24,7 +24,7 @@ class ViewController: UIViewController {
         
 //        linkedListDemo()
         
-        queueDemo()
+//        queueDemo()
     }
     
     func stackDemo() {
@@ -42,6 +42,9 @@ class ViewController: UIViewController {
             print("Pop element is : \(popElement)")
             print(stack)
         }
+        
+        stack.cleanStack()
+        print(stack)
     }
     
     func printInReverse<T>(_ array: [T]) {

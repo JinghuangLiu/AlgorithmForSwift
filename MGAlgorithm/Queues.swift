@@ -11,7 +11,7 @@ import Foundation
 public protocol Queue {
     associatedtype Element
     mutating func enqueue(_ element: Element) -> Bool
-    func dequeue() -> Element?
+    mutating func dequeue() -> Element?
     var isEmpty: Bool { get }
     var peek: Element? { get }
 }

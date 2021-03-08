@@ -46,6 +46,17 @@ public class Stack<Element> {
     public var isEmpty: Bool {
         peek() == nil
     }
+    
+    /// 清空栈元素
+    /// - Returns: 是否清空
+    @discardableResult
+    public func cleanStack() -> Bool {
+        if isEmpty {
+            return true
+        }
+        storage.removeAll()
+        return true
+    }
 }
 
 extension Stack: CustomStringConvertible {
