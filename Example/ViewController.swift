@@ -16,13 +16,15 @@ class ViewController: UIViewController {
         
         view.backgroundColor = .white
         
-        stackDemo()
+//        stackDemo()
         
 //        printInReverse(["刘","靖","煌"])
         
 //        nodeDemo()
         
 //        linkedListDemo()
+        
+        linkedListUsingCollectionDemo()
         
 //        queueDemo()
     }
@@ -94,6 +96,22 @@ class ViewController: UIViewController {
         
         list.remove(after: list.node(at: 1)!)
         print(list)
+    }
+    
+    func linkedListUsingCollectionDemo()  {
+        
+        let list = LinkedList<Int>()
+        for i in 0...9 {
+            list.append(i)
+        }
+        
+        print("List:\(list)")
+        print("First element: \(list[list.startIndex])")
+        print("Array containing first 3 elements: \(Array(list.prefix(3)))")
+        print("Array containing last 3 elements: \(Array(list.suffix(3)))")
+        
+        let sum = list.reduce(0, +)
+        print("Sum of all values: \(sum)")
     }
     
     func queueDemo() {

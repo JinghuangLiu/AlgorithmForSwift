@@ -57,6 +57,13 @@ public class Stack<Element> {
         storage.removeAll()
         return true
     }
+    
+    /// 获取当前栈的元素个数
+    /// - Returns: 当前栈的元素个数
+    @discardableResult
+    public func elementCount() -> Int {
+        return storage.count
+    }
 }
 
 extension Stack: CustomStringConvertible {
