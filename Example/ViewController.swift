@@ -45,8 +45,12 @@ class ViewController: UIViewController {
             print(stack)
         }
         
+        print(stack.elementCount())
+        
         stack.cleanStack()
         print(stack)
+        
+        print(stack.elementCount())
     }
     
     func printInReverse<T>(_ array: [T]) {
